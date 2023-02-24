@@ -1,5 +1,3 @@
-
-
 // create the cross icon
 let iconList = document.getElementsByTagName("li");
 
@@ -16,8 +14,11 @@ for (let i = 0; i < iconList.length; i++) {
 let crossBtn = document.getElementsByClassName("cross");
 for (let j = 0; j < crossBtn.length; j++) {
   crossBtn[j].onclick = function () {
+
     let removeItem = this.parentElement;
-    removeItem.style.display = "none";
+    removeItem.remove()
+    console.log(removeItem)
+    
   };
 }
 
@@ -44,7 +45,9 @@ let addNewList = () => {
   for (let k = 0; k < crossBtn.length; k++) {
     crossBtn[k].onclick = function () {
       let removeItem = this.parentElement;
-      removeItem.style.display = "none";
+      removeItem.remove()
+      console.log(removeItem)
     };
+    
   }
 };
